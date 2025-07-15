@@ -1,0 +1,39 @@
+.nav{
+    display: flex;
+    background-color: rgb(215, 213, 213);
+    height:70px;
+}
+.for{
+width:200px;
+height:50px; 
+margin-top:10px;
+margin-left:40px;
+   
+}
+ .navbar{
+    font-size:15px;
+    padding:20px;
+    color:rgb(20, 14, 14);
+   margin-left:150px;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    color:rgb(20, 14, 14);
+    font-weight:20px;
+    text-shadow: 10px;
+   
+}
+a:hover{
+    color:rgb(87, 85, 85);
+}
+.icons{
+ display: flex;
+padding:20px;
+margin:auto;
+}
+.icons img{
+    padding:10px;
+    width:30px;
+    height:30px;
+}
