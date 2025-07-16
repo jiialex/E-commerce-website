@@ -5,9 +5,12 @@ import person from '../assets/person.png'
 import search from '../assets/search.png'
 import like from '../assets/favourite.png'
 import { useState,useEffect } from 'react'
+import menu from '../assets/menu.png'
 
 function Navbar() {
    const [cartItems, setCartItems] = useState([]);
+   const [showDropdown, setShowDropDown] = useState(false);
+   const [isSidebarVisisble,setSidebarVisible] = useState(false);
 
    useEffect(()=> {
     console.log('cart updated:' , cartItems)
@@ -20,7 +23,7 @@ function Navbar() {
     console.log('cart:', updatedCart);
    }
    const handlePersonClick = () =>{
-    alert('profile viewed trigerred!');
+    setShowDropDown(!showDropdown);
    }
    const handleSearchClick = () => {
     const keyword = prompt('what are you searching for?');
@@ -43,11 +46,29 @@ function Navbar() {
       <div className='icons'>
         <img src={cart} onClick={handleCartClick} alt=""/>
         <img src={person} onClick={handlePersonClick} alt=""/>
+        {showDropdown && (
+        <div className='drop-down'>
+          <a href=''>My Profile</a>
+          <a href=''>Orders</a>
+          <a href=''>Logout</a>
+          </div>
+)}
         <img src={search} onClick={handleSearchClick} alt=""/>
         <img src={like} onClick={handleHeartClick} alt=""/>
+        <img className='menu-icon' src={menu} onClick={()=>setSidebarVisible(true)} alt=''/>
+      </div>
+    {isSidebarVisisble && (
+      <div className='side-bar open'>
+        <button onClick={()=>setSidebarVisible(false)}>✕ close</button>
+        <a href='/'>Home</a>
+        <a href='collection'>Collection</a>
+        <a href='about'>About</a>
+        <a href='contact'>Contact</a>
+ </div>
+    )}
 
       </div>
-    </div>
+   
   )
 }
 export default Navbar

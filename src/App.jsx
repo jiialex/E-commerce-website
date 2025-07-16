@@ -9,9 +9,11 @@ import Login from './Pages/login'
 import PleaseOrder from './Pages/pleaseOrder'
 import Orders from './Pages/orders'
 import Navbar from './Components/Navbar'
+import { ShopProvider } from './context/shopContext';
 
 function App() {
   return (
+    <ShopProvider>
     <BrowserRouter>
     <div className='app'>
          <Navbar />
@@ -29,6 +31,7 @@ function App() {
 
     </div>
     </BrowserRouter>
+    </ShopProvider>
   )
 }
 

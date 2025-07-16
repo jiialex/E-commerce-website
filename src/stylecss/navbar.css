@@ -37,3 +37,45 @@ margin:auto;
     width:30px;
     height:30px;
 }
+.drop-down a{
+display: block;
+top:3px;
+}
+.menu-icon {
+  display: none; 
+}
+
+.side-bar {
+  display: none; 
+}
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+  .side-bar.open{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:rgb(199, 198, 198);
+    width: 250px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none; 
+  }
+
+  .menu-icon {
+    display: block; 
+    cursor: pointer;
+    width: 30px;
+  }
+}

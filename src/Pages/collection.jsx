@@ -20,6 +20,7 @@ import p_img16 from '../assets/p_img16.png';
 import p_img17 from '../assets/p_img17.png';
 import p_img18 from '../assets/p_img18.png';
 import p_img19 from '../assets/p_img19.png';
+import SearchBar from '../Components/SearchBar';
 
 const Collection = () => {
   const [ratings, setRatings] = useState({});
@@ -28,20 +29,13 @@ const Collection = () => {
   const handleRating = (itemId, rating) => {
     setRatings((prevRatings) => ({
       ...prevRatings,
-      [itemId]: prevRatings[itemId] === rating ? 0 : rating, 
+      [itemId]: prevRatings[itemId] === rating ? 0 : rating,
     }));
   };
 
   const addToCart = (item) => {
     setCart(prev => [...prev, item]);
     alert(`${item} has been added to your cart.`);
-  };
-
-    const clearRating = (itemId) => {
-    setRatings((prevRatings) => ({
-      ...prevRatings,
-      [itemId]: 0,
-    }));
   };
 
   const collectionItems = [
@@ -65,7 +59,6 @@ const Collection = () => {
     { id: 18, name: 'clothe18', image: p_img17, price: '$99.94' },
     { id: 19, name: 'clothe19', image: p_img18, price: '$109' },
     { id: 20, name: 'clothe21', image: p_img19, price: '$100' },
-
   ];
 
   return (
@@ -73,13 +66,13 @@ const Collection = () => {
       <div className='collection'>
         <h2>LATEST COLLECTIONS</h2>
         <p>The best collections and quality products</p>
+        <SearchBar/>
       </div>
-
       <div className='image-container'>
         {collectionItems.map((item) => (
           <div className='box' key={item.id}>
             <div className='image'>
-           <a href="#" className="fas fa-heart"></a>
+              <a href="#" className="fas fa-heart"></a>
               <img
                 src={item.image}
                 alt={item.name}
@@ -91,12 +84,12 @@ const Collection = () => {
               <div className='stars'>
                 {[1, 2, 3, 4, 5].map((star) => (
                   <i
-                   key={star}
-              className={`fas ${star <= (ratings[item.id] || 0) ? 'fa-star' : 'fa-star-half-alt'}`}
-              onClick={() => handleRating(item.id, star)}
-              style={{
-                color: star <= (ratings[item.id] || 0) ? 'green' : '#ccc',
-                cursor: 'pointer',
+                    key={star}
+                    className={star <= (ratings[item.id] || 0) ? 'fas fa-star' : 'far fa-star'}
+                    onClick={() => handleRating(item.id, star)}
+                     style={{
+                      color: star <= (ratings[item.id] || 0) ? 'yellow' : '#ccc',
+                      cursor: 'pointer',
                     }}
                   ></i>
                 ))}
