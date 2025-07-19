@@ -1,0 +1,51 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer,
+.company,
+.Get {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.footer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.footer p {
+  padding: 0px;
+  margin-left: 30px;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+}
+
+.company h2,
+.Get h2 {
+  font-size: 18px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.company ul li,
+.Get ul li {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 5px 0;
+  list-style: none;
+}
+.copy{
+    font-size:13px;
+    display: flex;
+    justify-content: center;
+    padding:5px;
+}

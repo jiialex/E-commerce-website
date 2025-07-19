@@ -1,0 +1,41 @@
+.subscribe{
+    margin:0;
+    padding:5px;
+
+}
+.subscribe h4{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+}
+.subscribe p{
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+ .inp {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+.subscribe input {
+  width: 240px;
+  height: 30px; 
+}
+
+.subscribe .btn {
+  width: 120px;
+  height: 40px;
+  background-color: rgb(135, 108, 108);
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribe .btn:hover {
+  background-color: rgb(112, 107, 107);
+}

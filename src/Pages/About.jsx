@@ -1,5 +1,6 @@
 import '../stylecss/about.css'
 import about from '../assets/about.png'
+import Footer from '../Components/Footer'
 const About = () => {
   return (
     <div>
@@ -30,6 +31,7 @@ We meticulously select and vet <br/>each product to ensure it meets <br/>our str
   <p><strong>Exceptional Customer Service:</strong>Our team of dedicated professionals is here to assist you the way, ensuring your satisfaction is our top priority.</p>
 </div>
       </div>
+      <Footer/>
     </div>
   );
 }

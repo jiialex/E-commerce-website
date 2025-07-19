@@ -1,5 +1,7 @@
 import '../stylecss/contact.css'
 import contact from '../assets/contact.png'
+import Subscribe from '../Components/Subscribe';
+import Footer from '../Components/Footer';
 
 const Contact = () => {
   return (
@@ -15,7 +17,8 @@ const Contact = () => {
            learn more about our team and job openings<br/><br/>
            <button className='explore'>Explore Jobs</button></p>
         </div>
-    
+    <Subscribe/>
+    <Footer/>
     </div>
   );
 }

@@ -36,7 +36,7 @@ function Navbar() {
    }
   return (
     <div className='nav'>
-        <img src={Logo} className='for' alt="" />   
+        <a href='/'><img src={Logo} className='for' alt="" />  </a> 
       <div className='navbar'>
          <a href='/'>HOME</a>
          <a href='collection'>COLLECTION</a>
@@ -45,7 +45,7 @@ function Navbar() {
       </div>
       <div className='icons'>
         <img src={cart} onClick={handleCartClick} alt=""/>
-        <img src={person} onClick={handlePersonClick} alt=""/>
+       <img src={person} onClick={handlePersonClick} alt=""/>
         {showDropdown && (
         <div className='drop-down'>
           <a href=''>My Profile</a>

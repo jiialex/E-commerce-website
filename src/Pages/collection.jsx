@@ -21,6 +21,9 @@ import p_img17 from '../assets/p_img17.png';
 import p_img18 from '../assets/p_img18.png';
 import p_img19 from '../assets/p_img19.png';
 import SearchBar from '../Components/SearchBar';
+import Subscribe from '../Components/Subscribe';
+import Footer from '../Components/Footer'
+import OurPolicy from '../Components/OurPolicy';
 
 const Collection = () => {
   const [ratings, setRatings] = useState({});
@@ -102,6 +105,9 @@ const Collection = () => {
           </div>
         ))}
       </div>
+      <OurPolicy/>
+      <Subscribe/>
+      <Footer/>
     </div>
   );
 };
